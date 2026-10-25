@@ -1,0 +1,205 @@
+{
+ "size": [
+  1440,
+  2560
+ ],
+ "order": [
+  "feet_L",
+  "feet_R",
+  "skirt",
+  "torso",
+  "sleeve_L",
+  "sleeve_R",
+  "hair_L",
+  "hair_R",
+  "head",
+  "eye_L_open",
+  "eye_L_closed",
+  "eye_R_open",
+  "eye_R_closed"
+ ],
+ "parts": {
+  "feet_L": {
+   "file": "assets/part_feet_L.png",
+   "x": 542,
+   "y": 2314,
+   "w": 139,
+   "h": 190,
+   "pivot": [
+    400,
+    2340
+   ],
+   "parent": null,
+   "label": "左足",
+   "group": "body"
+  },
+  "feet_R": {
+   "file": "assets/part_feet_R.png",
+   "x": 847,
+   "y": 2314,
+   "w": 120,
+   "h": 198,
+   "pivot": [
+    672,
+    2336
+   ],
+   "parent": null,
+   "label": "右足",
+   "group": "body"
+  },
+  "skirt": {
+   "file": "assets/part_skirt.png",
+   "x": 385,
+   "y": 1245,
+   "w": 703,
+   "h": 1172,
+   "pivot": [
+    735,
+    1250
+   ],
+   "parent": null,
+   "label": "裙摆",
+   "group": "body"
+  },
+  "torso": {
+   "file": "assets/part_torso.png",
+   "x": 516,
+   "y": 622,
+   "w": 449,
+   "h": 651,
+   "pivot": [
+    735,
+    1010
+   ],
+   "parent": null,
+   "label": "衣身",
+   "group": "body"
+  },
+  "sleeve_L": {
+   "file": "assets/part_sleeve_L.png",
+   "x": 103,
+   "y": 660,
+   "w": 488,
+   "h": 1472,
+   "pivot": [
+    572,
+    712
+   ],
+   "parent": null,
+   "label": "左广袖",
+   "group": "body"
+  },
+  "sleeve_R": {
+   "file": "assets/part_sleeve_R.png",
+   "x": 878,
+   "y": 655,
+   "w": 489,
+   "h": 1524,
+   "pivot": [
+    900,
+    706
+   ],
+   "parent": null,
+   "label": "右广袖",
+   "group": "body"
+  },
+  "hair_L": {
+   "file": "assets/part_hair_L.png",
+   "x": 538,
+   "y": 601,
+   "w": 190,
+   "h": 731,
+   "pivot": [
+    640,
+    690
+   ],
+   "parent": null,
+   "label": "左侧垂发",
+   "group": "body"
+  },
+  "hair_R": {
+   "file": "assets/part_hair_R.png",
+   "x": 763,
+   "y": 601,
+   "w": 218,
+   "h": 750,
+   "pivot": [
+    838,
+    690
+   ],
+   "parent": null,
+   "label": "右侧垂发",
+   "group": "body"
+  },
+  "head": {
+   "file": "assets/part_head.png",
+   "x": 545,
+   "y": 200,
+   "w": 415,
+   "h": 509,
+   "pivot": [
+    735,
+    700
+   ],
+   "parent": null,
+   "label": "头部·发髻",
+   "group": "body"
+  },
+  "eye_L_open": {
+   "file": "assets/part_eye_L_open.png",
+   "x": 668,
+   "y": 437,
+   "w": 54,
+   "h": 42,
+   "pivot": [
+    695,
+    458
+   ],
+   "parent": "head",
+   "label": "左眼·睁",
+   "group": "face"
+  },
+  "eye_L_closed": {
+   "file": "assets/part_eye_L_closed.png",
+   "x": 668,
+   "y": 437,
+   "w": 54,
+   "h": 42,
+   "pivot": [
+    695,
+    458
+   ],
+   "parent": "head",
+   "label": "左眼·闭",
+   "group": "face"
+  },
+  "eye_R_open": {
+   "file": "assets/part_eye_R_open.png",
+   "x": 758,
+   "y": 439,
+   "w": 54,
+   "h": 40,
+   "pivot": [
+    785,
+    459
+   ],
+   "parent": "head",
+   "label": "右眼·睁",
+   "group": "face"
+  },
+  "eye_R_closed": {
+   "file": "assets/part_eye_R_closed.png",
+   "x": 758,
+   "y": 439,
+   "w": 54,
+   "h": 40,
+   "pivot": [
+    785,
+    459
+   ],
+   "parent": "head",
+   "label": "右眼·闭",
+   "group": "face"
+  }
+ }
+}

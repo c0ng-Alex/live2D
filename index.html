@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>绯衣公子 · Live2D 动作台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='4' fill='%23a8323c'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23fbeee4'%3E绯%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div class="app">
+
+  <header class="top">
+    <div class="brand">
+      <div class="seal">绯</div>
+      <div class="brand-text">
+        <h1>绯衣公子</h1>
+        <p>Live2D 立绘动作台 · 正面站立 · 九层部件可调</p>
+      </div>
+    </div>
+    <div class="top-meta">
+      <span>立绘 1440 × 2560</span>
+      <span class="dot"></span>
+      <span>13 个部件层</span>
+      <span class="dot"></span>
+      <span>6 组预设动作</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="stage-wrap">
+      <div class="stage" id="stage">
+        <canvas id="stageCanvas"></canvas>
+        <div class="stage-frame"></div>
+        <div class="stage-tag">
+          <span class="tag-line"></span>
+          <span id="motionLabel">待机 · 呼吸</span>
+        </div>
+        <div class="stage-hint">移动光标 — 视线跟随　·　点击下方动作 — 播放</div>
+        <div class="stamp">袖</div>
+      </div>
+      <div class="stage-foot">
+        <div class="chips" id="quickMotions"></div>
+        <button class="ghost" id="btnReset">复位</button>
+      </div>
+    </section>
+
+    <aside class="panel">
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-tab="motion">动作</button>
+        <button class="tab" data-tab="param">参数</button>
+        <button class="tab" data-tab="layer">图层</button>
+        <button class="tab" data-tab="sheet">拆解图</button>
+      </nav>
+
+      <div class="tab-body">
+        <section class="pane active" data-pane="motion">
+          <div class="pane-head">
+            <h2>动作预设</h2>
+            <p>点击卡片播放，可循环。每个动作由多根骨骼参数叠加而成。</p>
+          </div>
+          <div id="motionList" class="motion-list"></div>
+          <div class="pane-head sub">
+            <h2>动图导出</h2>
+            <p>由本页面逐帧渲染导出的 GIF，可直接保存。</p>
+          </div>
+          <div id="gifGrid" class="gif-grid"></div>
+        </section>
+
+        <section class="pane" data-pane="param">
+          <div class="pane-head">
+            <h2>参数调节</h2>
+            <p>拖动滑块实时改变部件角度与形变，右侧数值可直接输入。</p>
+          </div>
+          <div id="paramList"></div>
+          <div class="param-actions">
+            <button class="ghost" id="btnBlink">眨一次眼</button>
+            <label class="switch">
+              <input type="checkbox" id="autoBlink" checked>
+              <span>自动眨眼</span>
+            </label>
+          </div>
+        </section>
+
+        <section class="pane" data-pane="layer">
+          <div class="pane-head">
+            <h2>部件图层</h2>
+            <p>自下而上共 13 层。点击眼睛图标隐藏，点击名称单独查看。</p>
+          </div>
+          <div class="layer-actions">
+            <button class="ghost small" id="btnAll">全部显示</button>
+            <button class="ghost small" id="btnExplode">拆解预览</button>
+          </div>
+          <div id="layerList" class="layer-list"></div>
+        </section>
+
+        <section class="pane" data-pane="sheet">
+          <div class="pane-head">
+            <h2>部件拆解图</h2>
+            <p>按参考图版式导出的 PNG：左侧完整立绘，右侧逐层平铺全部部件。</p>
+          </div>
+          <a class="sheet-link" href="assets/parts_sheet.png" download>
+            <img src="assets/parts_sheet.png" alt="部件拆解图">
+            <span class="sheet-badge">点击保存 PNG</span>
+          </a>
+          <ul class="sheet-notes">
+            <li>人物由 9 个身体部件 + 4 个眼神部件构成</li>
+            <li>被遮挡的区域已做修补，部件旋转时不会破洞</li>
+            <li>广袖、裙摆、垂发为独立软体，可单独摆动</li>
+          </ul>
+        </section>
+      </div>
+    </aside>
+  </main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
